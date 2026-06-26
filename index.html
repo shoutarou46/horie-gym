@@ -1085,32 +1085,47 @@
 
     .symptom-list {
       margin: 0 0 44px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+
+    @media (max-width: 680px) {
+      .symptom-list { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    }
+
+    @media (max-width: 440px) {
+      .symptom-list { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    }
+
+    .symptom-item {
       display: flex;
       flex-direction: column;
-      gap: 52px;
+      align-items: center;
+      gap: 10px;
     }
 
     .symptom-title {
-      font-family: 'Shippori Mincho', serif;
-      font-size: clamp(1.2rem, 3vw, 1.5rem);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: clamp(0.7rem, 1.4vw, 0.82rem);
       font-weight: 500;
       color: var(--text);
-      letter-spacing: 0.04em;
-      margin-bottom: 18px;
-      padding-left: 18px;
-      border-left: 4px solid var(--lagoon);
+      letter-spacing: 0.02em;
       line-height: 1.5;
+      text-align: center;
+      order: 2;
     }
 
     .symptom-photo-wrap {
       width: 100%;
-      aspect-ratio: 16 / 7;
+      aspect-ratio: 3 / 4;
       overflow: hidden;
       background: linear-gradient(135deg, var(--ocean-pale), #cce9f2);
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 2px dashed rgba(14,122,152,0.2);
+      border: 1.5px dashed rgba(14,122,152,0.25);
+      order: 1;
     }
 
     .symptom-photo-wrap img {
@@ -1124,14 +1139,14 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 10px;
+      gap: 6px;
       color: var(--text-light);
       text-align: center;
     }
 
     .symptom-photo-placeholder svg {
-      width: 40px;
-      height: 40px;
+      width: 24px;
+      height: 24px;
       stroke: var(--text-light);
       fill: none;
       stroke-width: 1.2;
@@ -1139,8 +1154,8 @@
     }
 
     .symptom-photo-placeholder span {
-      font-size: 0.8rem;
-      letter-spacing: 0.08em;
+      font-size: 0.65rem;
+      letter-spacing: 0.06em;
     }
 
     .worry-end {
