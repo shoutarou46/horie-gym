@@ -593,12 +593,14 @@
 
     .service-item {
       max-width: 820px;
-      margin: 0 auto;
-      padding: 64px 0;
-      border-top: 1px solid var(--border);
+      margin: 0 auto 32px;
+      padding: 48px 40px;
+      background: var(--white);
+      border-radius: 4px;
+      box-shadow: 0 2px 16px rgba(10,61,82,0.08);
     }
 
-    .service-item:first-child { border-top: none; padding-top: 0; }
+    .service-item:first-child { }
 
     .service-header {
       display: flex;
@@ -681,7 +683,7 @@
     .service-desc {
       font-family: 'Noto Serif JP', serif;
       font-size: clamp(0.92rem, 1.8vw, 1.02rem);
-      color: var(--text-mid);
+      color: var(--text);
       line-height: 2.3;
       font-weight: 300;
     }
