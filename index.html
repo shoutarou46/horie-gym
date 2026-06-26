@@ -787,6 +787,7 @@
       text-align: center;
       position: relative;
       overflow: hidden;
+      scroll-margin-top: 64px;
     }
 
     .cta-wave-top {
@@ -869,6 +870,42 @@
     .btn-cta:hover {
       background: var(--coral-dark);
       transform: translateY(-2px);
+    }
+
+    .cta-booking-label {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+
+    .cta-btn-group {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-cta-line {
+      display: inline-block;
+      background: #06C755;
+      color: var(--white);
+      font-size: 0.92rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      padding: 20px 40px;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn-cta-line:hover {
+      background: #05a848;
+      transform: translateY(-2px);
+    }
+
+    .btn-cta {
+      padding: 20px 40px;
     }
 
     .cta-note {
@@ -1533,7 +1570,11 @@
         あなたの"変わりたい"を、<br>
         ホリエジムがサポートします。
       </p>
-      <a href="#" class="btn-cta">初回体験を予約する</a>
+      <p class="cta-booking-label">初回体験はホットペッパーもしくは公式LINEから</p>
+      <div class="cta-btn-group">
+        <a href="https://beauty.hotpepper.jp/kr/slnH000816460/" class="btn-cta" target="_blank" rel="noopener noreferrer">ホットペッパーはこちら</a>
+        <a href="#" class="btn-cta-line">公式LINEはこちら</a>
+      </div>
       <p class="cta-note">まずはお気軽にご相談ください</p>
     </div>
   </section>
