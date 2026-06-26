@@ -14,20 +14,20 @@
 
   <style>
     :root {
-      --navy:       #0d3240;
-      --ocean:      #1a7090;
-      --ocean-mid:  #2e9ab8;
-      --ocean-pale: #e8f5f9;
-      --coral:      #c8623c;
-      --coral-dark: #a84a2c;
-      --cream:      #faf8f4;
-      --sand:       #f5e8d0;
+      --deep:       #0a3d52;
+      --ocean:      #0e7a98;
+      --lagoon:     #1a9ab8;
+      --ocean-pale: #e4f6fb;
+      --coral:      #d4613c;
+      --coral-dark: #b04a28;
+      --cream:      #fffef8;
+      --sand:       #fdf2d8;
       --warm-gold:  #c9973a;
       --white:      #ffffff;
-      --text:       #1a1e2e;
-      --text-mid:   #4a5568;
-      --text-light: #7a8899;
-      --border:     #dce5ea;
+      --text:       #1a2e38;
+      --text-mid:   #4a5a68;
+      --text-light: #7a8e98;
+      --border:     #d0e4ea;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -51,12 +51,13 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: var(--navy);
+      background: linear-gradient(135deg, #0a3d52 0%, #105f7a 100%);
+      border-bottom: 2px solid rgba(26,154,184,0.22);
       transition: box-shadow 0.3s ease;
     }
 
     .sticky-header.scrolled {
-      box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 20px rgba(10,61,82,0.3);
     }
 
     .header-logo {
@@ -93,7 +94,7 @@
     /* ── HERO ── */
     .hero {
       min-height: 100vh;
-      background: var(--navy);
+      background: linear-gradient(160deg, #0a3d52 0%, #0e7a98 58%, #0d6880 100%);
       position: relative;
       display: flex;
       align-items: center;
@@ -101,10 +102,17 @@
       overflow: hidden;
     }
 
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 75% 55% at 65% 40%, rgba(26,154,184,0.15) 0%, transparent 68%);
+      pointer-events: none;
+    }
+
     .hero-wave {
       position: absolute;
-      bottom: 0; left: 0; right: 0;
-      opacity: 0.06;
+      bottom: -1px; left: 0; right: 0;
       pointer-events: none;
     }
 
@@ -112,7 +120,7 @@
       position: relative;
       z-index: 1;
       text-align: center;
-      padding: 100px 24px 80px;
+      padding: 100px 24px 110px;
       max-width: 720px;
       animation: fadeUp 1s ease both;
     }
@@ -125,7 +133,7 @@
     .hero-eyebrow {
       font-size: 0.75rem;
       letter-spacing: 0.2em;
-      color: var(--ocean-mid);
+      color: rgba(100,220,240,0.9);
       font-weight: 400;
       margin-bottom: 32px;
       display: flex;
@@ -139,7 +147,7 @@
       content: '';
       width: 32px;
       height: 1px;
-      background: var(--ocean-mid);
+      background: rgba(100,220,240,0.5);
     }
 
     .hero-title {
@@ -154,7 +162,7 @@
 
     .hero-title em {
       font-style: normal;
-      color: #6ecfe8;
+      color: #64dce8;
     }
 
     .hero-rule {
@@ -167,7 +175,7 @@
     .hero-catch {
       font-family: 'Noto Serif JP', serif;
       font-size: clamp(0.95rem, 2.2vw, 1.15rem);
-      color: rgba(255,255,255,0.75);
+      color: rgba(255,255,255,0.78);
       font-weight: 300;
       line-height: 2.2;
       margin-bottom: 48px;
@@ -223,7 +231,7 @@
       flex: 1;
       max-width: 36px;
       height: 1px;
-      background: var(--ocean-mid);
+      background: var(--warm-gold);
     }
 
     .section-title {
@@ -245,8 +253,8 @@
 
     /* ── EMPATHY ── */
     .empathy {
-      background: var(--white);
-      border-top: 3px solid var(--ocean-pale);
+      background: var(--sand);
+      position: relative;
     }
 
     .empathy-text p {
@@ -268,8 +276,8 @@
     .inner-voice {
       margin: 40px 0;
       padding: 36px 40px;
-      border-left: 3px solid var(--ocean-mid);
-      background: var(--ocean-pale);
+      border-left: 3px solid var(--warm-gold);
+      background: rgba(253,242,216,0.7);
     }
 
     .inner-voice p {
@@ -282,7 +290,7 @@
 
     /* ── PROBLEMS ── */
     .problems {
-      background: var(--cream);
+      background: var(--white);
     }
 
     .checklist {
@@ -301,20 +309,20 @@
       align-items: flex-start;
       gap: 14px;
       padding: 16px 20px;
-      background: var(--white);
+      background: var(--cream);
       border: 1px solid var(--border);
       transition: border-color 0.2s ease;
     }
 
     .check-item:hover {
-      border-color: var(--ocean-mid);
+      border-color: var(--lagoon);
     }
 
     .check-icon {
       flex-shrink: 0;
       width: 20px;
       height: 20px;
-      border: 2px solid var(--ocean-mid);
+      border: 2px solid var(--lagoon);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -325,8 +333,8 @@
       content: '';
       width: 8px;
       height: 5px;
-      border-left: 2px solid var(--ocean-mid);
-      border-bottom: 2px solid var(--ocean-mid);
+      border-left: 2px solid var(--lagoon);
+      border-bottom: 2px solid var(--lagoon);
       transform: rotate(-45deg) translateY(-1px);
       display: block;
     }
@@ -339,7 +347,7 @@
 
     /* ── WHY ── */
     .why-section {
-      background: var(--white);
+      background: var(--cream);
     }
 
     .cause-flow {
@@ -359,13 +367,13 @@
       flex-shrink: 0;
       width: 44px;
       height: 44px;
-      border: 2px solid var(--navy);
+      border: 2px solid var(--ocean);
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: 'Shippori Mincho', serif;
       font-size: 1rem;
-      color: var(--navy);
+      color: var(--ocean);
       font-weight: 600;
     }
 
@@ -406,14 +414,14 @@
     }
 
     .solution-point:hover {
-      border-left-color: var(--ocean-mid);
+      border-left-color: var(--lagoon);
     }
 
     .sol-marker {
       flex-shrink: 0;
       width: 36px;
       height: 36px;
-      background: var(--navy);
+      background: var(--ocean);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -446,7 +454,7 @@
 
     /* ── RESULTS ── */
     .results {
-      background: var(--cream);
+      background: var(--sand);
     }
 
     .results-grid {
@@ -472,8 +480,8 @@
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0;
-      height: 2px;
-      background: var(--ocean-mid);
+      height: 3px;
+      background: linear-gradient(90deg, var(--lagoon), var(--coral));
     }
 
     .result-card-icon {
@@ -602,7 +610,7 @@
     .service-rule {
       width: 36px;
       height: 2px;
-      background: var(--ocean-mid);
+      background: linear-gradient(90deg, var(--lagoon), var(--warm-gold));
       margin-bottom: 24px;
     }
 
@@ -622,11 +630,12 @@
     }
 
     .service-tag {
-      border: 1px solid var(--border);
-      color: var(--text-mid);
+      border: 1px solid rgba(26,154,184,0.3);
+      color: var(--ocean);
       font-size: 0.75rem;
       padding: 5px 14px;
       letter-spacing: 0.05em;
+      background: rgba(228,246,251,0.5);
     }
 
     /* ── ABOUT ── */
@@ -637,7 +646,7 @@
     .about-box {
       background: var(--white);
       border: 1px solid var(--border);
-      border-top: 3px solid var(--navy);
+      border-top: 3px solid var(--warm-gold);
       padding: 48px;
       margin-top: 44px;
     }
@@ -677,7 +686,7 @@
       flex-shrink: 0;
       width: 56px;
       height: 56px;
-      background: var(--navy);
+      background: var(--ocean);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -707,18 +716,24 @@
 
     /* ── CTA ── */
     .cta-section {
-      background: var(--navy);
+      background: linear-gradient(160deg, #0a3d52 0%, #0e7a98 58%, #0d6880 100%);
       padding: 100px 24px;
       text-align: center;
       position: relative;
       overflow: hidden;
     }
 
-    .cta-wave {
+    .cta-wave-top {
       position: absolute;
-      bottom: 0; left: 0; right: 0;
-      opacity: 0.05;
+      top: -1px; left: 0; right: 0;
       pointer-events: none;
+    }
+
+    .cta-wave-bottom {
+      position: absolute;
+      bottom: -1px; left: 0; right: 0;
+      pointer-events: none;
+      opacity: 0.08;
     }
 
     .cta-inner {
@@ -731,7 +746,7 @@
     .cta-eyebrow {
       font-size: 0.7rem;
       letter-spacing: 0.25em;
-      color: var(--ocean-mid);
+      color: rgba(100,220,240,0.9);
       margin-bottom: 24px;
       display: flex;
       align-items: center;
@@ -744,7 +759,7 @@
       content: '';
       width: 32px;
       height: 1px;
-      background: var(--ocean-mid);
+      background: rgba(100,220,240,0.45);
     }
 
     .cta-title {
@@ -766,7 +781,7 @@
     .cta-sub {
       font-family: 'Noto Serif JP', serif;
       font-size: 1rem;
-      color: rgba(255,255,255,0.65);
+      color: rgba(255,255,255,0.68);
       line-height: 2.2;
       font-weight: 300;
       margin-bottom: 52px;
@@ -799,9 +814,9 @@
 
     /* ── INFO ── */
     .info-section {
-      background: var(--cream);
+      background: var(--sand);
       padding: 80px 24px;
-      border-top: 1px solid var(--border);
+      border-top: 1px solid rgba(201,151,58,0.2);
     }
 
     .info-inner {
@@ -830,7 +845,7 @@
     .info-rule {
       width: 36px;
       height: 2px;
-      background: var(--ocean-mid);
+      background: var(--warm-gold);
       margin: 20px auto;
     }
 
@@ -843,14 +858,34 @@
 
     /* ── FOOTER ── */
     footer {
-      background: var(--navy);
-      padding: 36px 24px;
+      background: linear-gradient(135deg, #0a3d52 0%, #105f7a 100%);
+      padding: 40px 24px;
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer-wave {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      pointer-events: none;
+      opacity: 0.08;
+    }
+
+    .footer-inner { position: relative; z-index: 1; }
+
+    .footer-tagline {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.12em;
+      margin-bottom: 12px;
+      font-weight: 300;
     }
 
     footer p {
       font-size: 0.75rem;
-      color: rgba(255,255,255,0.3);
+      color: rgba(255,255,255,0.28);
       letter-spacing: 0.08em;
     }
 
@@ -893,8 +928,9 @@
 
   <!-- HERO -->
   <section class="hero" aria-label="メインビジュアル">
-    <svg class="hero-wave" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <path d="M0,60 C180,100 360,20 540,60 C720,100 900,20 1080,60 C1260,100 1380,30 1440,60 L1440,120 L0,120 Z" fill="#6ecfe8"/>
+    <!-- Wave at bottom transitioning to sand empathy bg -->
+    <svg class="hero-wave" viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:90px; display:block;">
+      <path d="M0,50 C200,90 440,8 720,50 C1000,92 1240,10 1440,50 L1440,100 L0,100 Z" fill="#fdf2d8"/>
     </svg>
 
     <div class="hero-inner">
@@ -1206,6 +1242,39 @@
           </div>
         </div>
 
+        <div class="service-item reveal">
+          <div class="service-header">
+            <span class="service-number">03</span>
+            <h3 class="service-name">全身矯正ストレッチ</h3>
+          </div>
+          <div class="service-photo-wrap">
+            <img src="images/stretch.jpg" alt="全身矯正ストレッチ"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <div class="service-photo-placeholder" style="display:none;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <path d="M21 15l-5-5L5 21"/>
+              </svg>
+              <span>「images」フォルダに<br>「stretch.jpg」という名前で写真を入れてください</span>
+            </div>
+          </div>
+          <div>
+            <div class="service-rule"></div>
+            <p class="service-desc">
+              全身の筋肉・関節・姿勢を丁寧にチェックしながら、身体全体のバランスを整えていく専門的なストレッチです。<br>
+              日々の姿勢や動きのクセから生まれる身体の歪みにアプローチし、本来のしなやかさとバランスへと戻していきます。<br>
+              肩・腰・脚など気になる部位だけでなく、全身を連動させながら整えることで、より深い変化と軽さを感じていただけます。
+            </p>
+            <div class="service-tags">
+              <span class="service-tag">全身ストレッチ</span>
+              <span class="service-tag">姿勢矯正</span>
+              <span class="service-tag">慢性疲労の改善</span>
+              <span class="service-tag">柔軟性向上</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -1306,9 +1375,16 @@
 
   <!-- CTA -->
   <section class="cta-section" id="cta" aria-label="初回体験申し込み">
-    <svg class="cta-wave" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <path d="M0,60 C180,100 360,20 540,60 C720,100 900,20 1080,60 C1260,100 1380,30 1440,60 L1440,120 L0,120 Z" fill="#6ecfe8"/>
+    <!-- Wave top - transitions from white flow-section bg -->
+    <svg class="cta-wave-top" viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:70px; display:block;">
+      <path d="M0,40 C320,80 640,0 960,40 C1200,68 1360,15 1440,40 L1440,0 L0,0 Z" fill="#ffffff"/>
     </svg>
+
+    <!-- Subtle wave decoration inside CTA -->
+    <svg class="cta-wave-bottom" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,60 C180,100 360,20 540,60 C720,100 900,20 1080,60 C1260,100 1380,30 1440,60 L1440,120 L0,120 Z" fill="#64dce8"/>
+    </svg>
+
     <div class="cta-inner">
       <p class="cta-eyebrow">まずは一歩、踏み出してみてください</p>
       <h2 class="cta-title">
@@ -1331,7 +1407,7 @@
   <section class="info-section" aria-label="サロン情報">
     <div class="info-inner">
       <p class="section-eyebrow" style="justify-content:center; display:flex;">Access</p>
-      <h2 class="info-name">ホリエジム<span style="display:block; font-family:'Montserrat',sans-serif; font-size:0.75rem; letter-spacing:0.18em; color:var(--ocean-mid); margin-top:6px; font-weight:600;">HORIE GYM — SHINSAKURADAI</span></h2>
+      <h2 class="info-name">ホリエジム<span style="display:block; font-family:'Montserrat',sans-serif; font-size:0.75rem; letter-spacing:0.18em; color:var(--lagoon); margin-top:6px; font-weight:600;">HORIE GYM — SHINSAKURADAI</span></h2>
       <div class="info-rule"></div>
       <p class="info-detail">
         東京都練馬区羽沢1-7-7 ゼネラルビル2階<br>
@@ -1352,7 +1428,13 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2025 ホリエジム｜練馬区新桜台のパーソナルジム</p>
+    <svg class="footer-wave" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,30 C240,55 480,5 720,30 C960,55 1200,5 1440,30 L1440,0 L0,0 Z" fill="#64dce8"/>
+    </svg>
+    <div class="footer-inner">
+      <p class="footer-tagline">身体が整うと、毎日がちょっと軽くなる。</p>
+      <p>© 2025 ホリエジム｜練馬区新桜台のパーソナルジム</p>
+    </div>
   </footer>
 
   <!-- SEO STRUCTURED DATA -->
