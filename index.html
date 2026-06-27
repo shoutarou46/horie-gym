@@ -93,7 +93,7 @@
 
     /* ── HERO ── */
     .hero {
-      min-height: 80vh;
+      min-height: 53vh;
       background: #0a2030;
       position: relative;
       display: flex;
@@ -925,12 +925,11 @@
     /* ── INFO ── */
     .info-section {
       background: var(--sand);
-      padding: 80px 24px;
-      border-top: 1px solid rgba(201,151,58,0.2);
+      padding: 100px 24px;
     }
 
     .info-inner {
-      max-width: 640px;
+      max-width: 820px;
       margin: 0 auto;
       text-align: center;
     }
@@ -939,17 +938,9 @@
       width: 100%;
       height: 320px;
       border: 0;
-      border-radius: 12px;
+      border-radius: 10px;
       margin-top: 36px;
       display: block;
-    }
-
-    .info-name {
-      font-family: 'Shippori Mincho', serif;
-      font-size: 1.6rem;
-      color: var(--text);
-      font-weight: 500;
-      margin-bottom: 12px;
     }
 
     .info-rule {
@@ -960,10 +951,23 @@
     }
 
     .info-detail {
+      font-family: 'Noto Serif JP', serif;
       font-size: 0.88rem;
       color: var(--text-mid);
       line-height: 2.1;
+      font-weight: 300;
       margin-bottom: 36px;
+    }
+
+    .section-eyebrow-center {
+      justify-content: center;
+    }
+
+    .section-eyebrow-center::before {
+      content: '';
+      width: 36px;
+      height: 1px;
+      background: var(--warm-gold);
     }
 
     /* ── FOOTER ── */
@@ -1801,23 +1805,27 @@
   <!-- INFO -->
   <section class="info-section" aria-label="サロン情報">
     <div class="info-inner">
-      <p class="section-eyebrow" style="justify-content:center; display:flex;">Access</p>
-      <h2 class="info-name">ホリエジム<span style="display:block; font-family:'Montserrat',sans-serif; font-size:0.75rem; letter-spacing:0.18em; color:var(--lagoon); margin-top:6px; font-weight:600;">HORIE GYM — SHINSAKURADAI</span></h2>
-      <div class="info-rule"></div>
-      <p class="info-detail">
-        東京都練馬区羽沢1-7-7 ゼネラルビル2階<br>
-        新桜台駅 徒歩1分<br>
-        江古田駅 徒歩7分
-      </p>
-      <iframe
-        class="info-map"
-        src="https://maps.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E7%B7%B4%E9%A6%AC%E5%8C%BA%E7%BE%BD%E6%B2%A21-7-7+%E3%82%BC%E3%83%8D%E3%83%A9%E3%83%AB%E3%83%93%E3%83%AB&hl=ja&output=embed"
-        allowfullscreen=""
-        loading="eager"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="ホリエジム アクセスマップ"
-      ></iframe>
-      <a href="#cta" class="btn-primary" style="margin-top:36px; display:inline-block;">初回体験を予約する</a>
+      <div class="reveal">
+        <p class="section-eyebrow section-eyebrow-center">Access</p>
+        <h2 class="section-title">ホリエジム
+          <span style="display:block; font-family:'Noto Sans JP',sans-serif; font-size:0.75rem; letter-spacing:0.18em; color:var(--lagoon); margin-top:6px; font-weight:600;">HORIE GYM — SHINSAKURADAI</span>
+        </h2>
+        <div class="info-rule"></div>
+        <p class="info-detail">
+          東京都練馬区羽沢1-7-7 ゼネラルビル2階<br>
+          新桜台駅 徒歩1分<br>
+          江古田駅 徒歩7分
+        </p>
+        <iframe
+          class="info-map"
+          src="https://maps.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E7%B7%B4%E9%A6%AC%E5%8C%BA%E7%BE%BD%E6%B2%A21-7-7+%E3%82%BC%E3%83%8D%E3%83%A9%E3%83%AB%E3%83%93%E3%83%AB&hl=ja&output=embed"
+          allowfullscreen=""
+          loading="eager"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="ホリエジム アクセスマップ"
+        ></iframe>
+        <a href="#cta" class="btn-primary" style="margin-top:36px; display:inline-block;">初回体験を予約する</a>
+      </div>
     </div>
   </section>
 
