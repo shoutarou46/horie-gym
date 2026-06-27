@@ -93,7 +93,7 @@
 
     /* ── HERO ── */
     .hero {
-      min-height: 45vh;
+      min-height: 35vh;
       background: #0a2030;
       position: relative;
       display: flex;
@@ -1328,13 +1328,40 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
-      .sticky-header { padding: 0 20px; }
-      section { padding: 72px 18px; }
-      .about-box { padding: 32px 24px; }
-      .service-item { padding: 48px 0; }
-      .inner-voice { padding: 28px 24px; }
-      .gym-intro { padding: 32px 24px; }
-      .worry-quote { padding: 16px 20px; }
+      .sticky-header { padding: 0 16px; }
+      .header-cta { padding: 8px 14px; font-size: 0.72rem; letter-spacing: 0.04em; }
+
+      section { padding: 64px 20px; }
+      .services-section { padding: 64px 0; }
+      .reasons-section,
+      .cta-section,
+      .info-section { padding: 64px 20px; }
+      .campaign-banner { padding: 24px 16px; }
+
+      .hero-inner { padding: 80px 20px 96px; }
+      .hero-dots { bottom: 68px; }
+      .hero-eyebrow { font-size: 0.6rem; letter-spacing: 0.06em; gap: 8px; }
+      .hero-eyebrow::before,
+      .hero-eyebrow::after { width: 14px; }
+
+      .about-box { padding: 28px 20px; }
+      .service-item { padding: 36px 20px; }
+      .services-section .section-inner { padding: 0 20px; }
+      .inner-voice { padding: 24px 20px; }
+      .gym-intro { padding: 0; }
+      .worry-quote { padding: 0; }
+
+      .solution-point { padding: 20px 16px; gap: 14px; }
+      .flow-step { gap: 16px; padding: 28px 0; }
+
+      .symptom-photo-wrap { height: 130px; }
+
+      .cta-btn-group { flex-direction: column; align-items: stretch; gap: 12px; }
+      .btn-cta,
+      .btn-cta-line { text-align: center; padding: 16px 20px; }
+      .cta-sub { margin-bottom: 24px; }
+
+      .info-inner h2 span { font-size: 0.6rem !important; letter-spacing: 0.1em !important; }
     }
   </style>
 </head>
@@ -1479,17 +1506,12 @@
           </div>
         </div>
 
-        <p class="worry-end">など、<br>身体に負担がかかりやすくなってしまいます。</p>
+        <p class="worry-end">など、身体に負担がかかりやすくなってしまいます。</p>
 
         <!-- ホリエジム紹介 -->
         <div class="gym-intro">
           <p>
-            ホリエジムでは、<br>
-            ただ鍛えるだけではなく、<br>
-            <span class="gym-intro-accent">「姿勢」「身体の使い方」「筋力バランス」</span><br>
-            を整えながら、<br>
-            引き締まった健康的な身体づくりを<br>
-            サポートしていきます。
+            ホリエジムでは、ただ鍛えるだけではなく、<span class="gym-intro-accent">「姿勢」「身体の使い方」「筋力バランス」</span>を整えながら、引き締まった健康的な身体づくりをサポートしていきます。
           </p>
         </div>
 
@@ -1786,12 +1808,8 @@
       </h2>
       <div class="cta-rule"></div>
       <p class="cta-sub">
-        身体は、正しく整えて動かすことで、<br>
-        少しずつ変わっていきます。<br>
-        無理に追い込むのではなく、身体を整えながら、<br>
-        健康的に理想の身体を目指していく。<br><br>
-        あなたの"変わりたい"を、<br>
-        ホリエジムがサポートします。
+        身体は、正しく整えて動かすことで、少しずつ変わっていきます。無理に追い込むのではなく、身体を整えながら、健康的に理想の身体を目指していく。<br><br>
+        あなたの"変わりたい"を、ホリエジムがサポートします。
       </p>
       <p class="cta-booking-label">初回体験はホットペッパーもしくは公式LINEから</p>
       <div class="cta-btn-group">
