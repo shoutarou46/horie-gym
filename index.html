@@ -699,6 +699,80 @@
       background: rgba(228,246,251,0.5);
     }
 
+    .service-detail-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 28px;
+      padding: 12px 28px;
+      background: var(--ocean);
+      color: #fff;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, opacity 0.2s;
+      font-family: inherit;
+    }
+    .service-detail-btn:hover {
+      background: #1580a0;
+      opacity: 0.9;
+    }
+    .service-detail-btn svg {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+    }
+
+    /* 準備中モーダル */
+    .coming-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+    .coming-modal-overlay.active {
+      display: flex;
+    }
+    .coming-modal {
+      background: #fff;
+      padding: 48px 40px;
+      text-align: center;
+      max-width: 360px;
+      width: 90%;
+    }
+    .coming-modal-icon {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
+    .coming-modal-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--ocean);
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+    .coming-modal-text {
+      font-size: 0.9rem;
+      color: var(--charcoal);
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+    .coming-modal-close {
+      padding: 10px 32px;
+      background: var(--ocean);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      font-family: inherit;
+    }
+
     /* ── ABOUT ── */
     .about {
       background: var(--cream);
@@ -1701,6 +1775,10 @@
               <span class="service-tag">姿勢改善</span>
               <span class="service-tag">日常動作サポート</span>
             </div>
+            <a href="https://horie-gym-lp.vercel.app" target="_blank" rel="noopener noreferrer" class="service-detail-btn">
+              詳細はこちら
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
           </div>
         </div>
 
@@ -1734,6 +1812,10 @@
               <span class="service-tag">インナーマッスル</span>
               <span class="service-tag">慢性不調の改善</span>
             </div>
+            <button class="service-detail-btn" onclick="document.getElementById('comingModal').classList.add('active')">
+              詳細はこちら
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
           </div>
         </div>
 
@@ -1767,12 +1849,26 @@
               <span class="service-tag">慢性疲労の改善</span>
               <span class="service-tag">柔軟性向上</span>
             </div>
+            <button class="service-detail-btn" onclick="document.getElementById('comingModal').classList.add('active')">
+              詳細はこちら
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
           </div>
         </div>
 
       </div>
     </div>
   </section>
+
+  <!-- 準備中モーダル -->
+  <div id="comingModal" class="coming-modal-overlay" onclick="if(event.target===this)this.classList.remove('active')">
+    <div class="coming-modal">
+      <div class="coming-modal-icon">🔧</div>
+      <div class="coming-modal-title">準備中</div>
+      <p class="coming-modal-text">しばらくお待ちください</p>
+      <button class="coming-modal-close" onclick="document.getElementById('comingModal').classList.remove('active')">閉じる</button>
+    </div>
+  </div>
 
   <!-- FLOW -->
   <section class="flow-section" aria-label="体験の流れ">
