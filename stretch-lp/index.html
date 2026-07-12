@@ -619,6 +619,12 @@
       border: 1px solid rgba(14,122,152,0.14);
     }
     .illust-card svg { width: 80px; height: auto; }
+    .illust-card img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
     .illust-card-label {
       font-family: 'Noto Sans JP', sans-serif;
       font-size: 0.72rem;
@@ -1195,7 +1201,8 @@
       <div class="reveal reveal-delay-1" style="margin-top:28px;">
         <div class="illust-grid">
           <div class="illust-card">
-            <svg viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <img src="images/posture-check.jpg" alt="姿勢・バランスチェック" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+            <svg style="display:none;" viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <circle cx="40" cy="52" r="38" fill="#e4f6fb"/>
               <line x1="40" y1="14" x2="40" y2="90" stroke="#0e7a98" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.7"/>
               <circle cx="40" cy="24" r="9" fill="#fffef8" stroke="#0e7a98" stroke-width="2"/>
@@ -1210,7 +1217,8 @@
             <span class="illust-card-label">姿勢・バランスチェック</span>
           </div>
           <div class="illust-card">
-            <svg viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <img src="images/movement-check.jpg" alt="身体の使い方チェック" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+            <svg style="display:none;" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <ellipse cx="50" cy="42" rx="46" ry="34" fill="#e4f6fb"/>
               <rect x="12" y="63" width="76" height="7" rx="2" fill="#0e7a98" opacity="0.25"/>
               <rect x="15" y="49" width="8" height="18" rx="2" fill="#0e7a98" opacity="0.75"/>
@@ -1223,7 +1231,8 @@
             <span class="illust-card-label">身体の使い方チェック</span>
           </div>
           <div class="illust-card">
-            <svg viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <img src="images/continuous-support.jpg" alt="継続的なサポート" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+            <svg style="display:none;" viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <circle cx="40" cy="52" r="38" fill="#e4f6fb"/>
               <path d="M33 18 L40 10 L47 18" stroke="#1a9ab8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
               <circle cx="40" cy="28" r="9" fill="#fffef8" stroke="#0e7a98" stroke-width="2"/>
