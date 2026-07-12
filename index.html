@@ -132,6 +132,21 @@
       background: rgba(0, 0, 0, 0.45);
     }
 
+    .hero-slide-placeholder {
+      display: none;
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      font-size: 0.85rem;
+      line-height: 1.9;
+      letter-spacing: 0.04em;
+      padding: 16px;
+    }
+
     .hero-dots {
       position: absolute;
       bottom: 110px;
@@ -862,6 +877,29 @@
       margin: 0 auto;
     }
 
+    .campaign-banner-placeholder {
+      display: none;
+      width: 100%;
+      max-width: 680px;
+      min-height: 180px;
+      margin: 0 auto;
+      background: var(--ocean-pale);
+      border-radius: 12px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: var(--text-light);
+      padding: 32px;
+      text-align: center;
+    }
+
+    .campaign-banner-placeholder span {
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      line-height: 1.9;
+    }
+
     /* ── CTA ── */
     .cta-section {
       background: linear-gradient(160deg, #0a3d52 0%, #0e7a98 58%, #0d6880 100%);
@@ -1484,9 +1522,18 @@
     <!-- Slider background -->
     <div class="hero-slider">
       <div class="hero-slides" id="heroSlides">
-        <div class="hero-slide" style="background-image: url('images/hero-1.jpg');"></div>
-        <div class="hero-slide" style="background-image: url('images/hero-2.jpg');"></div>
-        <div class="hero-slide" style="background-image: url('images/hero-3.jpg');"></div>
+        <div class="hero-slide" style="background-image: url('images/hero-1.jpg');">
+          <img src="images/hero-1.jpg" alt="" style="position:absolute;width:1px;height:1px;opacity:0;" onerror="this.nextElementSibling.style.display='flex'">
+          <div class="hero-slide-placeholder">「images」フォルダに<br>「hero-1.jpg」という名前で保存してください</div>
+        </div>
+        <div class="hero-slide" style="background-image: url('images/hero-2.jpg');">
+          <img src="images/hero-2.jpg" alt="" style="position:absolute;width:1px;height:1px;opacity:0;" onerror="this.nextElementSibling.style.display='flex'">
+          <div class="hero-slide-placeholder">「images」フォルダに<br>「hero-2.jpg」という名前で保存してください</div>
+        </div>
+        <div class="hero-slide" style="background-image: url('images/hero-3.jpg');">
+          <img src="images/hero-3.jpg" alt="" style="position:absolute;width:1px;height:1px;opacity:0;" onerror="this.nextElementSibling.style.display='flex'">
+          <div class="hero-slide-placeholder">「images」フォルダに<br>「hero-3.jpg」という名前で保存してください</div>
+        </div>
       </div>
     </div>
 
@@ -1514,7 +1561,11 @@
 
   <!-- CAMPAIGN BANNER -->
   <section class="campaign-banner" aria-label="キャンペーンバナー">
-    <img src="images/campaign.png" alt="期間限定 入会金・事務手数料が0円">
+    <img src="images/campaign.png" alt="期間限定 入会金・事務手数料が0円"
+      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+    <div class="campaign-banner-placeholder">
+      <span>「images」フォルダに<br>「campaign.png」という名前で保存してください</span>
+    </div>
   </section>
 
   <!-- SERVICES -->

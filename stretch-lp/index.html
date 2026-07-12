@@ -382,6 +382,9 @@
       margin: 36px 0;
       border-radius: 10px;
       overflow: hidden;
+      background: linear-gradient(135deg, var(--ocean-pale), #cce9f2);
+      min-height: 220px;
+      position: relative;
     }
     .intro-photo-wrap img {
       width: 100%; height: auto;
@@ -466,8 +469,24 @@
       width: 100%; margin: 40px 0 0;
       border-radius: 10px; overflow: hidden;
       background: linear-gradient(135deg, var(--ocean-pale), #cce9f2);
+      min-height: 200px;
+      position: relative;
     }
     .pain-img-wrap img { width: 100%; height: auto; }
+
+    .photo-missing-label {
+      display: none;
+      position: absolute;
+      inset: 0;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.78rem;
+      line-height: 1.9;
+      letter-spacing: 0.03em;
+      padding: 16px;
+    }
 
     /* ─── WHY SECTION ─── */
     .why-section { background: var(--white); }
@@ -527,6 +546,7 @@
       border-radius: 10px; overflow: hidden;
       background: linear-gradient(135deg, var(--ocean-pale), #cce9f2);
       min-height: 180px;
+      position: relative;
     }
     .why-photo-wrap img { width: 100%; height: auto; }
 
@@ -545,6 +565,7 @@
       border-radius: 10px; overflow: hidden;
       background: linear-gradient(135deg, var(--ocean-pale), #cce9f2);
       min-height: 240px;
+      position: relative;
     }
     .about-photo-wrap img { width: 100%; height: auto; }
     .features-heading {
@@ -1004,7 +1025,8 @@
       </div>
       <div class="reveal reveal-delay-2" style="margin-top:32px;">
         <div class="intro-photo-wrap">
-          <img src="intro-photo.jpg" alt="肩に手を当てる女性" loading="lazy">
+          <img src="intro-photo.jpg" alt="肩に手を当てる女性" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <span class="photo-missing-label">「stretch-lp」フォルダに<br>「intro-photo.jpg」という名前で保存してください</span>
         </div>
       </div>
       <div class="reveal reveal-delay-1" style="margin-top:32px;">
@@ -1078,7 +1100,8 @@
       </div>
       <div class="reveal reveal-delay-1">
         <div class="pain-img-wrap">
-          <img src="images/pain-main.jpg" alt="肩に手を当てる女性" loading="lazy">
+          <img src="images/pain-main.jpg" alt="肩に手を当てる女性" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <span class="photo-missing-label">「stretch-lp/images」フォルダに<br>「pain-main.jpg」という名前で保存してください</span>
         </div>
       </div>
       <div class="reveal reveal-delay-2">
@@ -1126,7 +1149,8 @@
             疲労や不調は、原因ではなく"結果"として出ていることも多いのです。
           </div>
           <div class="why-photo-wrap">
-            <img src="why-photo.jpg" alt="疲れを感じる女性" loading="lazy">
+            <img src="why-photo.jpg" alt="疲れを感じる女性" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <span class="photo-missing-label">「stretch-lp」フォルダに<br>「why-photo.jpg」という名前で保存してください</span>
           </div>
         </div>
       </div>
@@ -1144,7 +1168,8 @@
       </div>
       <div class="reveal reveal-delay-1">
         <div class="about-photo-wrap">
-          <img src="about-photo.jpg" alt="全身矯正ストレッチの施術風景" loading="lazy">
+          <img src="about-photo.jpg" alt="全身矯正ストレッチの施術風景" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <span class="photo-missing-label">「stretch-lp」フォルダに<br>「about-photo.jpg」という名前で保存してください</span>
         </div>
       </div>
       <div class="reveal reveal-delay-2">
