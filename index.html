@@ -461,25 +461,16 @@
 
     .service-item:first-child { }
 
-    .service-item--visual {
-      max-width: none;
-      margin: 0 0 48px;
-      padding: 0;
-      background: transparent;
-      box-shadow: none;
-      border-radius: 0;
+    .service-visual-block {
       text-align: center;
+      margin-bottom: 48px;
     }
 
     .service-photo-full {
       display: block;
-      width: auto;
-      max-width: none;
+      width: 100%;
       height: auto;
-      margin-left: calc(50% - 50vw);
-      margin-right: calc(50% - 50vw);
       margin-bottom: 28px;
-      border-radius: 0;
     }
 
     .service-header {
@@ -1374,16 +1365,15 @@
 
   <!-- SERVICES -->
   <section class="services-section" aria-label="提供サービス">
+    <div class="service-visual-block">
+      <img src="images/２.png" alt="パーソナルトレーニング｜ダイエット・身体の引き締めを目的としたマンツーマンのパーソナルトレーニング。食事指導と組み合わせながら理想のボディラインを一緒に作っていきます。" class="service-photo-full">
+      <a href="https://horie-gym-lp.vercel.app" target="_blank" rel="noopener noreferrer" class="service-detail-btn">
+        詳細はこちら
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
     <div class="section-inner" style="max-width:100%; padding:0 24px;">
       <div class="service-list">
-
-        <div class="service-item service-item--visual">
-          <img src="images/２.png" alt="パーソナルトレーニング｜ダイエット・身体の引き締めを目的としたマンツーマンのパーソナルトレーニング。食事指導と組み合わせながら理想のボディラインを一緒に作っていきます。" class="service-photo-full">
-          <a href="https://horie-gym-lp.vercel.app" target="_blank" rel="noopener noreferrer" class="service-detail-btn">
-            詳細はこちら
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
 
         <div class="service-item">
           <div class="service-header">
