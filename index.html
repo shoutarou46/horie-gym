@@ -462,15 +462,24 @@
     .service-item:first-child { }
 
     .service-item--visual {
+      max-width: none;
+      margin: 0 0 48px;
+      padding: 0;
+      background: transparent;
+      box-shadow: none;
+      border-radius: 0;
       text-align: center;
     }
 
     .service-photo-full {
       display: block;
-      width: 100%;
+      width: auto;
+      max-width: none;
       height: auto;
-      border-radius: 12px;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
       margin-bottom: 28px;
+      border-radius: 0;
     }
 
     .service-header {
