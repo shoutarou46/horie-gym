@@ -461,6 +461,18 @@
 
     .service-item:first-child { }
 
+    .service-item--visual {
+      text-align: center;
+    }
+
+    .service-photo-full {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 28px;
+    }
+
     .service-header {
       display: flex;
       align-items: baseline;
@@ -1384,41 +1396,12 @@
 
       <div class="service-list">
 
-        <div class="service-item">
-          <div class="service-header">
-            <span class="service-number">01</span>
-            <h3 class="service-name">パーソナルトレーニング</h3>
-          </div>
-          <div class="service-photo-wrap">
-            <img src="images/personal-training.jpg" alt="パーソナルトレーニング"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-            <div class="service-photo-placeholder" style="display:none;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                <circle cx="8.5" cy="8.5" r="1.5"/>
-                <path d="M21 15l-5-5L5 21"/>
-              </svg>
-              <span>「images」フォルダに<br>「personal-training.jpg」という名前で写真を入れてください</span>
-            </div>
-          </div>
-          <div>
-            <div class="service-rule"></div>
-            <p class="service-desc">
-              ダイエット・身体の引き締めを目的とした、マンツーマンのパーソナルトレーニングです。<br>
-              食事指導と組み合わせながら、脂肪を落としながら筋肉を引き締める「理想のボディライン」を一緒に作っていきます。<br>
-              運動が久しぶりの方や、何度もダイエットに挫折してきた方こそ、ぜひお任せください。
-            </p>
-            <div class="service-tags">
-              <span class="service-tag">ダイエット</span>
-              <span class="service-tag">引き締め</span>
-              <span class="service-tag">食事指導</span>
-              <span class="service-tag">ボディメイク</span>
-            </div>
-            <a href="https://horie-gym-lp.vercel.app" target="_blank" rel="noopener noreferrer" class="service-detail-btn">
-              詳細はこちら
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-          </div>
+        <div class="service-item service-item--visual">
+          <img src="images/２.png" alt="パーソナルトレーニング｜ダイエット・身体の引き締めを目的としたマンツーマンのパーソナルトレーニング。食事指導と組み合わせながら理想のボディラインを一緒に作っていきます。" class="service-photo-full">
+          <a href="https://horie-gym-lp.vercel.app" target="_blank" rel="noopener noreferrer" class="service-detail-btn">
+            詳細はこちら
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
         </div>
 
         <div class="service-item">
