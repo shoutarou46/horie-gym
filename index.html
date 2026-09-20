@@ -35,7 +35,7 @@
 
     body {
       font-family: 'Noto Sans JP', sans-serif;
-      background: var(--cream);
+      background: var(--white);
       color: var(--text);
       overflow-x: hidden;
       line-height: 1.8;
@@ -51,26 +51,26 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: linear-gradient(135deg, #0a3d52 0%, #105f7a 100%);
-      border-bottom: 2px solid rgba(26,154,184,0.22);
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
       transition: box-shadow 0.3s ease;
     }
 
     .sticky-header.scrolled {
-      box-shadow: 0 2px 20px rgba(10,61,82,0.3);
+      box-shadow: 0 2px 20px rgba(10,61,82,0.1);
     }
 
     .header-logo {
       font-family: 'Shippori Mincho', serif;
       font-size: 1rem;
-      color: var(--white);
+      color: var(--text);
       font-weight: 500;
       letter-spacing: 0.05em;
     }
 
     .header-logo span {
       font-size: 0.68rem;
-      color: rgba(255,255,255,0.5);
+      color: var(--text-light);
       display: block;
       letter-spacing: 0.1em;
       font-family: 'Noto Sans JP', sans-serif;
@@ -438,7 +438,7 @@
 
     /* ── SERVICES ── */
     .services-section {
-      background: var(--ocean-pale);
+      background: var(--white);
       padding: 100px 0;
     }
 
@@ -499,15 +499,13 @@
     .service-photo-wrap {
       width: 100%;
       overflow: hidden;
-      background: var(--ocean-pale);
+      background: var(--white);
       margin-bottom: 36px;
-      border-radius: 12px;
     }
 
     .service-photo-wrap img {
       width: 100%;
-      height: 300px;
-      object-fit: cover;
+      height: auto;
       display: block;
       transition: transform 0.5s ease;
     }
@@ -727,15 +725,13 @@
 
     /* ── CAMPAIGN BANNER ── */
     .campaign-banner {
-      padding: 40px 24px;
-      background: #fff;
+      padding: 0;
+      background: var(--white);
     }
     .campaign-banner img {
       display: block;
       width: 100%;
-      max-width: 680px;
       height: auto;
-      margin: 0 auto;
     }
 
     .campaign-banner-placeholder {
@@ -763,25 +759,12 @@
 
     /* ── CTA ── */
     .cta-section {
-      background: linear-gradient(160deg, #0a3d52 0%, #0e7a98 58%, #0d6880 100%);
+      background: var(--white);
       padding: 100px 24px;
       text-align: center;
       position: relative;
       overflow: hidden;
       scroll-margin-top: 64px;
-    }
-
-    .cta-wave-top {
-      position: absolute;
-      top: -1px; left: 0; right: 0;
-      pointer-events: none;
-    }
-
-    .cta-wave-bottom {
-      position: absolute;
-      bottom: -1px; left: 0; right: 0;
-      pointer-events: none;
-      opacity: 0.08;
     }
 
     .cta-inner {
@@ -794,7 +777,8 @@
     .cta-eyebrow {
       font-size: 0.7rem;
       letter-spacing: 0.25em;
-      color: rgba(100,220,240,0.9);
+      color: var(--ocean);
+      font-weight: 600;
       margin-bottom: 24px;
       display: flex;
       align-items: center;
@@ -807,13 +791,13 @@
       content: '';
       width: 32px;
       height: 1px;
-      background: rgba(100,220,240,0.45);
+      background: var(--border);
     }
 
     .cta-title {
       font-family: 'Shippori Mincho', serif;
       font-size: clamp(1.25rem, 3.8vw, 1.9rem);
-      color: var(--white);
+      color: var(--text);
       font-weight: 500;
       line-height: 1.75;
       margin-bottom: 16px;
@@ -829,7 +813,7 @@
     .cta-sub {
       font-family: 'Noto Serif JP', serif;
       font-size: 0.9rem;
-      color: rgba(255,255,255,0.68);
+      color: var(--text-mid);
       line-height: 2.2;
       font-weight: 300;
       margin-bottom: 52px;
@@ -855,7 +839,7 @@
 
     .cta-booking-label {
       font-size: 0.88rem;
-      color: rgba(255,255,255,0.75);
+      color: var(--text-mid);
       letter-spacing: 0.08em;
       margin-bottom: 16px;
     }
@@ -891,14 +875,14 @@
 
     .cta-note {
       font-size: 0.78rem;
-      color: rgba(255,255,255,0.35);
+      color: var(--text-light);
       letter-spacing: 0.1em;
       margin-top: 20px;
     }
 
     /* ── INFO ── */
     .info-section {
-      background: var(--sand);
+      background: var(--white);
       padding: 100px 24px;
     }
 
@@ -964,18 +948,12 @@
 
     /* ── FOOTER ── */
     footer {
-      background: linear-gradient(135deg, #0a3d52 0%, #105f7a 100%);
+      background: var(--white);
+      border-top: 1px solid var(--border);
       padding: 40px 24px;
       text-align: center;
       position: relative;
       overflow: hidden;
-    }
-
-    .footer-wave {
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      pointer-events: none;
-      opacity: 0.08;
     }
 
     .footer-inner { position: relative; z-index: 1; }
@@ -983,7 +961,7 @@
     .footer-tagline {
       font-family: 'Noto Serif JP', serif;
       font-size: 0.82rem;
-      color: rgba(255,255,255,0.45);
+      color: var(--text-mid);
       letter-spacing: 0.12em;
       margin-bottom: 12px;
       font-weight: 300;
@@ -991,7 +969,7 @@
 
     footer p {
       font-size: 0.75rem;
-      color: rgba(255,255,255,0.28);
+      color: var(--text-light);
       letter-spacing: 0.08em;
     }
 
@@ -1330,7 +1308,6 @@
       .reasons-section,
       .cta-section,
       .info-section { padding: 64px 20px; }
-      .campaign-banner { padding: 24px 16px; }
 
       .hero { padding: 64px 0 0; }
 
@@ -1494,16 +1471,6 @@
 
   <!-- CTA -->
   <section class="cta-section" id="cta" aria-label="初回体験申し込み">
-    <!-- Wave top - transitions from white flow-section bg -->
-    <svg class="cta-wave-top" viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:70px; display:block;">
-      <path d="M0,40 C320,80 640,0 960,40 C1200,68 1360,15 1440,40 L1440,0 L0,0 Z" fill="#e4f6fb"/>
-    </svg>
-
-    <!-- Subtle wave decoration inside CTA -->
-    <svg class="cta-wave-bottom" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <path d="M0,60 C180,100 360,20 540,60 C720,100 900,20 1080,60 C1260,100 1380,30 1440,60 L1440,120 L0,120 Z" fill="#64dce8"/>
-    </svg>
-
     <div class="cta-inner">
       <p class="cta-eyebrow">体験トレーニング受付中</p>
       <h2 class="cta-title">
@@ -1558,9 +1525,6 @@
 
   <!-- FOOTER -->
   <footer>
-    <svg class="footer-wave" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <path d="M0,30 C240,55 480,5 720,30 C960,55 1200,5 1440,30 L1440,0 L0,0 Z" fill="#64dce8"/>
-    </svg>
     <div class="footer-inner">
       <p class="footer-tagline">身体が整うと、毎日がちょっと軽くなる。</p>
       <p>© 2026 ホリエジム｜練馬区新桜台のパーソナルジム</p>
