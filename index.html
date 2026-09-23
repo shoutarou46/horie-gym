@@ -751,6 +751,9 @@
       width: 100%;
       height: auto;
     }
+    .campaign-banner img + img {
+      margin-top: 16px;
+    }
 
     .campaign-banner-placeholder {
       display: none;
@@ -773,6 +776,21 @@
       font-size: 0.82rem;
       letter-spacing: 0.06em;
       line-height: 1.9;
+    }
+
+    .campaign-cta {
+      text-align: center;
+      margin-top: 24px;
+    }
+
+    /* ── PROBLEM AWARENESS ── */
+    .problem-section {
+      background: var(--white);
+    }
+    .problem-image {
+      display: block;
+      width: 100%;
+      height: auto;
     }
 
     /* ── CTA ── */
@@ -1380,9 +1398,42 @@
   <section class="campaign-banner" aria-label="キャンペーンバナー">
     <img src="images/campaign.png" alt="期間限定 入会金・事務手数料が0円"
       onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+    <img src="images/２.png" alt="期間限定 10名様限定 初回お試し体験が4,980円（税込）">
     <div class="campaign-banner-placeholder">
       <span>「images」フォルダに<br>「campaign.png」という名前で保存してください</span>
     </div>
+    <div class="campaign-cta">
+      <a href="#" class="btn-cta" onclick="document.getElementById('comingModal').classList.add('active'); return false;">今すぐ申し込む</a>
+    </div>
+  </section>
+
+  <!-- PROBLEM AWARENESS -->
+  <section class="problem-section" aria-label="お悩み">
+    <img src="images/３.png" alt="「なんとなくツラい」が当たり前になっていませんか？ 朝から身体が重い。疲れが抜けない。肩や腰がずっと気になる。そうやって、自分の身体を後回しにしていませんか？" class="problem-image">
+    <img src="images/４.png" alt="疲労や不調を我慢し続けることで身体は少しずつ確実に疲れやすくなっていきます。本当はもっとラクに動ける身体なのに。本当はもっと軽い毎日を送れるのに。" class="problem-image">
+    <img src="images/５.png" alt="こんなお悩みありませんか？ 朝から身体が重く疲れが抜けない。肩こり・腰の負担が慢性化している。猫背や反り腰など姿勢が気になる。毎日の疲れがどんどん溜まっていく。身体が硬く動かしづらい。睡眠が浅い・寝つきが悪い。マッサージを受けてもすぐ戻る。デスクワークや立ち仕事で身体がツラい。なんとなく不調が続いている。" class="problem-image">
+    <img src="images/６.png" alt="不調のメカニズム。身体は部分ごとにバラバラに動いているわけではなく、全身がつながり、互いに影響し合っています。肩こりの原因が実は手・腕や股関節にあることも。腰の負担の原因が足首や身体の使い方にあることもあります。疲労や不調は、原因ではなく結果として出ていることも多いです。" class="problem-image">
+  </section>
+
+  <!-- STRETCH INTRO -->
+  <section class="problem-section" aria-label="全身矯正ストレッチとは">
+    <img src="images/７.png" alt="全身矯正ストレッチとは？ 身体の状態や動きを確認しながら、本来の動きやバランスへ導いていく、身体を整えるためのストレッチです。ただ気持ちいいだけのストレッチではありません。" class="problem-image">
+    <img src="images/８.png" alt="全身矯正ストレッチの特徴。ストレッチ・姿勢調整・身体の動き改善を組み合わせた施術。一人ひとりの身体に合わせたオーダーメイド。身体が軽くなる。疲労改善。姿勢が整う。呼吸がしやすくなる。動きやすくなる。" class="problem-image">
+  </section>
+
+  <!-- WHY CHOSEN -->
+  <section class="problem-section" aria-label="ホリエジムが選ばれる理由">
+    <img src="images/１０.png" alt="他とは違う、ホリエジムが選ばれる理由。01「とりあえずほぐす」ことはしません。今の身体の状態を確認しながら、なぜ不調が出ているのか、どこに負担がかかっているのかを説明しながら進めていきます。02 一人ひとりに合わせた施術。ストレッチ・姿勢調整・身体の動き改善を組み合わせながら、一人ひとりの身体に合わせてオーダーメイドで行っていきます。03「そこ」だけでなく全身を整える。肩こりや腰の負担も、実は他の部位が原因になっていることがあります。全身のつながりを見ながら、根本から整えていきます。" class="problem-image">
+  </section>
+
+  <!-- EXPERIENCE FLOW -->
+  <section class="problem-section" aria-label="体験の流れ">
+    <img src="images/１１.png" alt="体験の流れ。1. ご予約・来店。ご希望の日時をご予約ください。ご来店後、ピラティスがしやすい服装に着替えていただきます。お飲み物などはご持参ください！ 2. カウンセリング。カウンセリングで今の状態や、運動経験をお聞きします。これからの目標を一緒に明確にします。どんなことでも大丈夫ですので、なんでもご相談ください！ 3. 体験スタート！カウンセリング内容をもとに、全身矯正ストレッチを体感していただきます。お悩み、体に合わせたオーダーメイド施術を体験することができます！" class="problem-image">
+  </section>
+
+  <!-- FAQ -->
+  <section class="problem-section" aria-label="よくある質問">
+    <img src="images/１２.png" alt="よくある質問。Q. どんな悩みの方が利用していますか？ 肩や腰の負担、身体の硬さ、姿勢の崩れ、疲れやすさなど、さまざまなお悩みの方にご利用いただいています。Q. どんな服装で行けばいいですか？ 普段着で問題ありません。必要であればレンタルウェアもご用意してますのでお気軽にお声がけください。Q. 施術は痛いですか？ 強い痛みを我慢して行う施術ではありません。お身体の状態を確認しながら、進めていきます。Q. 肩こりや腰のつらさがなくても受けられますか？ 身体のメンテナンスや姿勢・動きのチェックを目的としてご利用いただくこともできます。" class="problem-image">
   </section>
 
   <!-- SERVICES -->
