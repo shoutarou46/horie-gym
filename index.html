@@ -12,7 +12,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600&family=Shippori+Mincho:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <script type="application/ld+json">
   {
@@ -43,11 +43,11 @@
       --deep:       #0a3d52;
       --ocean:      #0e7a98;
       --lagoon:     #1a9ab8;
-      --ocean-pale: #e4f6fb;
+      --ocean-pale: #ffffff;
       --coral:      #d4613c;
       --coral-dark: #b04a28;
-      --cream:      #fffef8;
-      --sand:       #fdf2d8;
+      --cream:      #ffffff;
+      --sand:       #ffffff;
       --warm-gold:  #c9973a;
       --white:      #ffffff;
       --text:       #1a2e38;
@@ -77,18 +77,18 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: linear-gradient(135deg, #0a3d52 0%, #105f7a 100%);
-      border-bottom: 2px solid rgba(26,154,184,0.22);
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
       transition: box-shadow 0.3s ease;
     }
     .sticky-header.scrolled {
-      box-shadow: 0 2px 20px rgba(10,61,82,0.3);
+      box-shadow: 0 2px 20px rgba(10,61,82,0.1);
     }
     .header-logo {
-      font-family: 'Shippori Mincho', serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: 1rem;
       font-weight: 500;
-      color: var(--white);
+      color: var(--text);
       line-height: 1.5;
     }
     .header-logo span {
@@ -96,7 +96,7 @@
       font-family: 'Noto Sans JP', sans-serif;
       font-size: 0.68rem;
       font-weight: 300;
-      color: rgba(255,255,255,0.5);
+      color: var(--text-light);
       letter-spacing: 0.08em;
     }
     .header-cta {
@@ -118,7 +118,7 @@
     /* ─── HERO ─── */
     .hero {
       min-height: 100vh;
-      background: linear-gradient(160deg, var(--deep) 0%, var(--ocean) 70%, #0d6880 100%);
+      background: var(--white);
       display: flex;
       align-items: center;
       padding-top: 64px;
@@ -130,7 +130,7 @@
       position: absolute;
       width: 500px; height: 500px;
       border-radius: 50%;
-      background: rgba(26,154,184,0.1);
+      background: rgba(26,154,184,0.06);
       top: -100px; right: -120px;
       pointer-events: none;
     }
@@ -139,7 +139,7 @@
       position: absolute;
       width: 280px; height: 280px;
       border-radius: 50%;
-      background: rgba(212,97,60,0.08);
+      background: rgba(212,97,60,0.05);
       bottom: 120px; left: -60px;
       pointer-events: none;
     }
@@ -156,7 +156,7 @@
       font-family: 'Noto Sans JP', sans-serif;
       font-size: 0.7rem;
       letter-spacing: 0.3em;
-      color: rgba(255,255,255,0.6);
+      color: var(--text-light);
       text-transform: uppercase;
       font-weight: 400;
       margin-bottom: 28px;
@@ -173,10 +173,10 @@
       background: rgba(201,151,58,0.55);
     }
     .hero-main-title {
-      font-family: 'Shippori Mincho', serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: clamp(1.9rem, 5vw, 3rem);
       font-weight: 500;
-      color: var(--white);
+      color: var(--text);
       line-height: 1.65;
       margin-bottom: 24px;
       letter-spacing: 0.04em;
@@ -184,12 +184,12 @@
     }
     .hero-main-title em {
       font-style: normal;
-      color: rgba(255,178,140,0.92);
+      color: var(--coral);
     }
     .hero-sub {
-      font-family: 'Noto Serif JP', serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: clamp(0.88rem, 2vw, 0.98rem);
-      color: rgba(255,255,255,0.68);
+      color: var(--text-mid);
       line-height: 2.1;
       margin-bottom: 44px;
       font-weight: 300;
@@ -221,7 +221,7 @@
     .hero-note {
       font-family: 'Noto Sans JP', sans-serif;
       font-size: 0.72rem;
-      color: rgba(255,255,255,0.45);
+      color: var(--text-light);
       letter-spacing: 0.1em;
     }
     .hero-badges {
@@ -233,9 +233,9 @@
       animation: fadeUp 0.8s ease 0.4s both;
     }
     .hero-badge {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.14);
-      color: rgba(255,255,255,0.7);
+      background: var(--white);
+      border: 1px solid var(--border);
+      color: var(--text-mid);
       font-family: 'Noto Sans JP', sans-serif;
       font-size: 0.72rem;
       font-weight: 400;
@@ -307,7 +307,7 @@
       background: var(--warm-gold);
     }
     .section-title {
-      font-family: 'Shippori Mincho', serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: clamp(1.8rem, 4.5vw, 2.6rem);
       font-weight: 500;
       color: var(--text);
@@ -315,7 +315,7 @@
       margin-bottom: 24px;
     }
     .section-lead {
-      font-family: 'Noto Serif JP', serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: clamp(0.95rem, 2vw, 1.05rem);
       color: var(--text-mid);
       line-height: 2.2;
@@ -359,7 +359,7 @@
     .img-wrap {
       width: 100%;
       overflow: hidden;
-      background: linear-gradient(135deg, var(--ocean-pale), #cce9f2);
+      background: #ffffff;
       border-radius: 10px;
     }
     .img-wrap img {
@@ -387,9 +387,9 @@
     /* ─── QUOTE BLOCK ─── */
     .quote-block {
       border-left: 3px solid var(--warm-gold);
-      background: rgba(253,242,216,0.7);
+      background: var(--white);
       padding: 36px 40px;
-      font-family: 'Noto Serif JP', serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-weight: 300;
       line-height: 2.3;
       color: var(--text-mid);
@@ -402,7 +402,7 @@
       margin: 36px 0;
       border-radius: 10px;
       overflow: hidden;
-      background: linear-gradient(135deg, var(--ocean-pale), #cce9f2);
+      background: #ffffff;
       min-height: 220px;
       position: relative;
     }
@@ -496,7 +496,7 @@
     .pain-img-wrap {
       width: 100%; margin: 40px 0 0;
       border-radius: 10px; overflow: hidden;
-      background: linear-gradient(135deg, var(--ocean-pale), #cce9f2);
+      background: #ffffff;
       min-height: 200px;
       position: relative;
     }
@@ -526,7 +526,7 @@
     }
     .why-problem { display: flex; flex-direction: column; gap: 16px; }
     .why-problem > p {
-      font-family: 'Noto Serif JP', serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: 0.93rem;
       color: var(--text-mid);
       line-height: 2.1;
@@ -544,9 +544,9 @@
     .why-list li::before { content: '・'; position: absolute; left: 0; color: var(--coral); }
     .why-result {
       border-left: 3px solid var(--warm-gold);
-      background: rgba(253,242,216,0.7);
+      background: var(--white);
       padding: 20px 24px;
-      font-family: 'Noto Serif JP', serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: 0.9rem;
       color: var(--text-mid);
       line-height: 2.1;
@@ -554,7 +554,7 @@
     }
     .why-solution { display: flex; flex-direction: column; gap: 20px; }
     .why-solution > p {
-      font-family: 'Noto Serif JP', serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: 0.93rem;
       color: var(--text-mid);
       line-height: 2.3;
@@ -563,7 +563,7 @@
     .why-solution-box {
       background: var(--ocean-pale);
       padding: 28px 32px;
-      font-family: 'Noto Serif JP', serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: 0.93rem;
       color: var(--text);
       line-height: 2.2;
@@ -572,7 +572,7 @@
     .why-photo-wrap {
       width: 100%;
       border-radius: 10px; overflow: hidden;
-      background: linear-gradient(135deg, var(--ocean-pale), #cce9f2);
+      background: #ffffff;
       min-height: 180px;
       position: relative;
     }
@@ -581,7 +581,7 @@
     /* ─── ABOUT SECTION ─── */
     .about-section { background: var(--ocean-pale); }
     .about-lead {
-      font-family: 'Noto Serif JP', serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: clamp(0.95rem, 2vw, 1.05rem);
       color: var(--text-mid);
       line-height: 2.2;
@@ -591,13 +591,13 @@
     .about-photo-wrap {
       margin: 36px 0;
       border-radius: 10px; overflow: hidden;
-      background: linear-gradient(135deg, var(--ocean-pale), #cce9f2);
+      background: #ffffff;
       min-height: 240px;
       position: relative;
     }
     .about-photo-wrap img { width: 100%; height: auto; }
     .features-heading {
-      font-family: 'Shippori Mincho', serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: 1.05rem;
       font-weight: 500;
       color: var(--text);
@@ -687,7 +687,7 @@
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      font-family: 'Shippori Mincho', serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: 0.72rem;
       font-weight: 600;
       color: var(--ocean);
@@ -696,14 +696,14 @@
       letter-spacing: 0.04em;
     }
     .reason-body h3 {
-      font-family: 'Shippori Mincho', serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: 1rem;
       font-weight: 500;
       color: var(--text);
       margin-bottom: 10px;
     }
     .reason-body p {
-      font-family: 'Noto Serif JP', serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: 0.88rem;
       color: var(--text-mid);
       line-height: 2;
@@ -756,7 +756,7 @@
       width: 48px; height: 48px;
       background: var(--ocean);
       color: var(--white);
-      font-family: 'Shippori Mincho', serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: 0.85rem;
       font-weight: 600;
       display: flex;
@@ -773,14 +773,14 @@
       margin-bottom: 16px;
     }
     .flow-body h3 {
-      font-family: 'Shippori Mincho', serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: 1rem;
       font-weight: 500;
       color: var(--text);
       margin-bottom: 6px;
     }
     .flow-body p {
-      font-family: 'Noto Serif JP', serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: 0.88rem;
       color: var(--text-mid);
       line-height: 1.8;
@@ -789,7 +789,7 @@
 
     /* ─── CTA SECTION ─── */
     .cta-section {
-      background: linear-gradient(160deg, #0a3d52 0%, #0e7a98 58%, #0d6880 100%);
+      background: var(--white);
       padding: 100px 24px;
       position: relative;
       overflow: hidden;
@@ -821,17 +821,17 @@
       background: rgba(201,151,58,0.5);
     }
     .cta-title {
-      font-family: 'Shippori Mincho', serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: clamp(1.6rem, 4vw, 2.4rem);
       font-weight: 500;
-      color: var(--white);
+      color: var(--text);
       line-height: 1.7;
       margin-bottom: 24px;
     }
     .cta-text {
-      font-family: 'Noto Serif JP', serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: 0.93rem;
-      color: rgba(255,255,255,0.72);
+      color: var(--text-mid);
       line-height: 2.2;
       font-weight: 300;
       margin-bottom: 44px;
@@ -850,7 +850,7 @@
     }
     .btn-cta:hover { background: var(--coral-dark); transform: translateY(-2px); }
     .cta-subtitle {
-      color: rgba(255,255,255,0.80);
+      color: var(--text-mid);
       font-family: 'Noto Sans JP', sans-serif;
       font-size: 0.88rem;
       letter-spacing: 0.1em;
@@ -900,9 +900,9 @@
       margin-top: 32px;
     }
     .cta-tag {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.16);
-      color: rgba(255,255,255,0.65);
+      background: var(--white);
+      border: 1px solid var(--border);
+      color: var(--text-mid);
       font-family: 'Noto Sans JP', sans-serif;
       font-size: 0.72rem;
       padding: 6px 16px;
@@ -914,7 +914,7 @@
     .info-inner { max-width: 820px; margin: 0 auto; text-align: center; }
     .info-rule { width: 36px; height: 2px; background: var(--warm-gold); margin: 20px auto; }
     .info-detail {
-      font-family: 'Noto Serif JP', serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: 0.88rem;
       color: var(--text-mid);
       line-height: 2.1;
@@ -932,18 +932,15 @@
 
     /* ─── FOOTER ─── */
     footer {
-      background: linear-gradient(135deg, #0a3d52 0%, #105f7a 100%);
+      background: var(--white);
       padding: 48px 24px 36px;
       text-align: center;
       position: relative;
       overflow: hidden;
+      border-top: 1px solid var(--border);
     }
     .footer-wave-deco {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      opacity: 0.08;
-      pointer-events: none;
+      display: none;
     }
     .footer-inner {
       max-width: 820px;
@@ -952,24 +949,24 @@
       z-index: 1;
     }
     .footer-logo {
-      font-family: 'Shippori Mincho', serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: 1.1rem;
       font-weight: 500;
-      color: var(--white);
+      color: var(--text);
       margin-bottom: 8px;
     }
     .footer-tagline {
-      font-family: 'Noto Serif JP', serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: 0.82rem;
-      color: rgba(255,255,255,0.45);
+      color: var(--text-light);
       font-weight: 300;
       letter-spacing: 0.05em;
       margin-bottom: 28px;
     }
     .footer-info {
-      font-family: 'Noto Serif JP', serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: 0.82rem;
-      color: rgba(255,255,255,0.5);
+      color: var(--text-mid);
       line-height: 2;
       font-weight: 300;
       margin-bottom: 28px;
@@ -977,10 +974,10 @@
     .footer-copy {
       font-family: 'Noto Sans JP', sans-serif;
       font-size: 0.75rem;
-      color: rgba(255,255,255,0.28);
+      color: var(--text-light);
       letter-spacing: 0.1em;
       padding-top: 20px;
-      border-top: 1px solid rgba(255,255,255,0.08);
+      border-top: 1px solid var(--border);
     }
 
     /* ─── RESPONSIVE ─── */
@@ -1038,7 +1035,7 @@
       </div>
     </div>
     <svg class="hero-wave" viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <path d="M0,40 C240,8 480,65 720,36 C960,8 1200,62 1440,38 L1440,70 L0,70 Z" fill="#fffef8"/>
+      <path d="M0,40 C240,8 480,65 720,36 C960,8 1200,62 1440,38 L1440,70 L0,70 Z" fill="#ffffff"/>
     </svg>
   </section>
 
@@ -1071,20 +1068,6 @@
   <section class="about-section image-banner-section" aria-label="サービス詳細">
     <img src="images/stretch-intro.png" alt="全身矯正ストレッチとは？ 身体の状態や動きを確認しながら、本来の動きやバランスへ導いていく、身体を整えるためのストレッチです。ただ気持ちいいだけのストレッチではありません。">
     <img src="images/stretch-features.png" alt="全身矯正ストレッチの特徴。ストレッチ・姿勢調整・身体の動き改善を組み合わせた施術。一人ひとりの身体に合わせたオーダーメイド。身体が軽くなる。疲労改善。姿勢が整う。呼吸がしやすくなる。動きやすくなる。">
-    <div class="section-inner">
-      <div class="reveal" style="margin-top:56px;">
-        <h3 class="features-heading">こんな方におすすめです</h3>
-        <ul class="features-list">
-          <li>身体が硬くて不安な方</li>
-          <li>疲れが抜けにくい方</li>
-          <li>肩こりや腰の負担を感じる方</li>
-          <li>姿勢を整えたい方</li>
-          <li>身体を軽くしたい方</li>
-          <li>運動不足を感じている方</li>
-          <li>リラックスしながら身体を整えたい方</li>
-        </ul>
-      </div>
-    </div>
   </section>
 
   <!-- ─── REASONS ─── -->
@@ -1103,29 +1086,6 @@
     </div>
   </section>
 
-  <!-- ─── RESULTS ─── -->
-  <section class="results-section" aria-labelledby="results-heading">
-    <div class="section-inner">
-      <div class="reveal">
-        <p class="section-eyebrow">お客様の変化</p>
-        <h2 class="section-title" id="results-heading">身体が変わると、<br>毎日も少しずつ変わっていく。</h2>
-        <div class="section-rule"></div>
-      </div>
-      <div class="reveal reveal-delay-1">
-        <div class="results-grid">
-          <span class="result-tag">朝スッキリ起きやすくなった</span>
-          <span class="result-tag">仕事終わりの疲れ方が違う</span>
-          <span class="result-tag">姿勢がラクになった</span>
-          <span class="result-tag">身体が軽く感じるようになった</span>
-          <span class="result-tag">呼吸がしやすくなった</span>
-          <span class="result-tag">以前より動きやすくなった</span>
-          <span class="result-tag">身体の変化を実感しやすい</span>
-          <span class="result-tag">納得しながら受けられる</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ─── FLOW ─── -->
   <section class="flow-section image-banner-section" aria-label="体験の流れ">
     <img src="images/flow.png" alt="体験の流れ。1. ご予約・来店。ご希望の日時をご予約ください。ご来店後、ピラティスがしやすい服装に着替えていただきます。お飲み物などはご持参ください！ 2. カウンセリング。カウンセリングで今の状態や、運動経験をお聞きします。これからの目標を一緒に明確にします。どんなことでも大丈夫ですので、なんでもご相談ください！ 3. 体験スタート！カウンセリング内容をもとに、全身矯正ストレッチを体感していただきます。お悩み、体に合わせたオーダーメイド施術を体験することができます！">
@@ -1137,24 +1097,12 @@
   </section>
 
   <!-- ─── CTA ─── -->
-  <section class="cta-section" id="cta" aria-labelledby="cta-heading" style="position:relative;">
+  <section class="cta-section" id="cta" aria-label="ご予約" style="position:relative;">
     <svg style="position:absolute;top:-1px;left:0;right:0;width:100%;height:60px;pointer-events:none;"
          viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <path d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,15 1440,30 L1440,0 L0,0 Z" fill="#fffef8"/>
+      <path d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,15 1440,30 L1440,0 L0,0 Z" fill="#ffffff"/>
     </svg>
     <div class="cta-inner reveal">
-      <p class="cta-eyebrow">まずは一歩、踏み出してみてください</p>
-      <h2 class="cta-title" id="cta-heading">
-        「毎日なんとなくツラい」<br>
-        そんな状態を、<br>
-        我慢し続けていませんか？
-      </h2>
-      <p class="cta-text">
-        無理を重ね続ける前に、一度、自分の身体と向き合う時間をつくってみませんか。<br><br>
-        身体は、整えることで少しずつ変わっていきます。<br><br>
-        あなたが毎日を少しでもラクに、軽く過ごせるように。<br>
-        全身矯正ストレッチで、身体をリセットしてみませんか？
-      </p>
       <p class="cta-subtitle">初回体験はホットペッパーもしくは公式LINEから</p>
       <div class="cta-btn-wrap">
         <a href="https://beauty.hotpepper.jp/kr/slnH000816460/" class="btn-hotpepper" target="_blank" rel="noopener noreferrer">
@@ -1173,7 +1121,7 @@
     </div>
     <svg style="position:absolute;bottom:-1px;left:0;right:0;width:100%;height:60px;pointer-events:none;"
          viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <path d="M0,30 C240,5 480,58 720,30 C960,5 1200,55 1440,30 L1440,60 L0,60 Z" fill="#fdf2d8"/>
+      <path d="M0,30 C240,5 480,58 720,30 C960,5 1200,55 1440,30 L1440,60 L0,60 Z" fill="#ffffff"/>
     </svg>
   </section>
 
